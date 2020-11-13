@@ -6,9 +6,9 @@ function Card({data,onClick}){
     return(
         <>
             <div className="card" onClick={onClick}>
-                <div className="card__desc">{data.desc}</div>
-                <div className="card__content">{data.ans1}</div>
-                <div className="card__content">{data.ans2}</div>
+                <div className="card__desc">{data.question}</div>
+                <div className="card__content">{data.answer1}</div>
+                <div className="card__content">{data.answer2}</div>
             </div>
         </>        
     );
