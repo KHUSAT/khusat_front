@@ -3,18 +3,21 @@ import Card from "../components/card/Card";
 import ProgressBar from "../components/progressbar/ProgressBar";
 import axios from 'axios';
 import "./SurveyPage.scss";
+import 'antd/dist/antd.css'
+// import redux
+import {useDispatch} from 'react-redux';
+import {getResult,getResultSuccess,getResultError} from '../store/action/result';
 
 function SurveyPage({history}) {
   const [curIdx, setCurIdx] = useState(0);
   const [question, setQuestion] = useState([]);
-  const [answer, setAnswer] = useState([]);
-  const [respond, setRespond] = useState([]);
+  const [answer, setAnswer] = useState([]);  
+  const dispatch = useDispatch();
 
   useEffect(()=>{
     const getApi = async() =>{
       const {data} = await axios.get("getquestions");
       setQuestion(data);
-      // console.log(question);
     }
     getApi();
   },[]);
@@ -22,10 +25,14 @@ function SurveyPage({history}) {
   useEffect(()=>{
     if(curIdx === 10){
       const postApi = async ()=>{
-        const {data} = await axios.post("submit", answer);
-        console.log(data);
-        setRespond(data);
-        
+        dispatch(getResult);
+        try{
+          const {data} = await axios.post("submit", answer);
+          console.log(data);
+          dispatch(getResultSuccess(data));
+        }catch(e){
+          dispatch(getResultError(e));
+        }
       }
       postApi();
       history.push('/result');

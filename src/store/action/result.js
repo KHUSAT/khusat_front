@@ -40,6 +40,8 @@ function result(
                 error: action.payload
             }
         }
+        default:
+            return state;
     }
 }
 

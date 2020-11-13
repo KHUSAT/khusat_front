@@ -1,0 +1,25 @@
+// .container{
+//     background-color:#536349;
+// }
+
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+
+    &__title{
+        font-size: 5rem;
+        font-weight: bold;
+    }
+
+    &__position{
+        font-size: 4.5rem;
+    }
+
+    &__desc{
+        margin-top: 4rem;
+        font-size: 1.4rem;
+    }
+}

@@ -4,6 +4,10 @@
     justify-content: center;
     align-items: center;
     margin-top: 10rem;
+
+    &__progress{
+        margin-bottom: 3rem;
+    }
 }
 
 .slider{
@@ -12,7 +16,7 @@
     display: flex;
     align-items: center;
     margin: 0;
-    // overflow: hidden;
+    overflow: hidden;
 
     &__wrapper{
         border: 1px solid red;
