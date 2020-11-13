@@ -1,10 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import MainPage from './pages/MainPage';
+import {BrowserRouter,Route,Switch} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact to="/" component={MainPage}/>
+        <Route to="/survey"></Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
