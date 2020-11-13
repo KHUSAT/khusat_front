@@ -34,20 +34,29 @@ import "./SurveyPage.scss";
 function SurveyPage() {
   const [curIdx, setCurIdx] = useState(0);
   const [question, setQuestion] = useState([]);
-  const clickToNext = () =>{
-    setCurIdx(curIdx+1);
-  }
+  const [answer, serAnswer] = useState([]);
+
+  // const clickAns1 = (e) =>{
+  //   setCurIdx(curIdx+1);
+  //   const temp 
+  // }
+  // const clickAns2 = (e) =>{
+  //   setCurIdx(curIdx+1);
+  // }
 
   useEffect(()=>{
-    (async () => {
-        try{
-            const result = await axios.get("192.168.0.16:8000/getquestions");
-            setQuestion(result);
-            console.log(result);
-        }catch(e){
-            console.log("서버 통신 실패");
-        }
-    })();
+    const getApi = async() =>{
+      const apis = axios.create({
+        baseURL: "",
+        withCredentials: true
+      });
+      const result = await apis.get("http://192.168.0.16:8000/getquestions");
+      console.log(result);
+      return result;
+    }
+    const data = getApi();
+    // setQuestion(data);
+    // console.log(data);
   },[]);
 
   return (
@@ -60,8 +69,10 @@ function SurveyPage() {
                 <div className="slider__wrapper">
                   <Card 
                     key={data.num}
-                    data={data} 
-                    onClick={clickToNext}
+                    data={data}
+                    // onClick1={clickAns1}
+                    // onClick2={clickAns2}
+                    answer={answer}
                     style={{
                         transform: `translateX(${(-30)*curIdx}rem)`,
                         transition: "0.5s",

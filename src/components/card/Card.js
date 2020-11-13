@@ -1,14 +1,14 @@
 import React from 'react';
 import './Card.scss';
 
-function Card({data,onClick}){
+function Card({data,answer,onClick1,onClick2}){
     // type: true false
     return(
         <>
-            <div className="card" onClick={onClick}>
+            <div className="card">
                 <div className="card__desc">{data.question}</div>
-                <div className="card__content">{data.answer1}</div>
-                <div className="card__content">{data.answer2}</div>
+                <div className="card__content" onClick={onClick1}>{data.answer1}</div>
+                <div className="card__content" onClick={onClick2}>{data.answer2}</div>
             </div>
         </>        
     );
