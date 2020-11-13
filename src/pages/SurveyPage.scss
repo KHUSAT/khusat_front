@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.slider{
+    border: 1px solid gray;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    // overflow: hidden;
+
+    &__wrapper{
+        border: 1px solid red;
+        width: 30rem;
+    }
+
+    &__desc{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+}
+
+// swiper

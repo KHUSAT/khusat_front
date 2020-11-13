@@ -1,14 +1,17 @@
-import './App.css';
-import MainPage from './pages/MainPage';
-import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import "./App.scss";
+import MainPage from "./pages/MainPage";
+import SurveyPage from "./pages/SurveyPage";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact to="/" component={MainPage}/>
-        <Route to="/survey"></Route>
-      </Switch>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={MainPage} />
+          <Route path="/survey" component={SurveyPage} />
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 }

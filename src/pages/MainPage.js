@@ -3,10 +3,10 @@ import './MainPage.scss';
 import ProgressBar from "../components/progressbar/ProgressBar";
 import {Button} from "antd";
 
-function MainPage(){
+function MainPage({history}){
     const [percent,setPercent] = useState(30);
     const onClick = () => {
-
+        history.push('/survey');
     }
 
     return(
