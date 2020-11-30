@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Card.scss';
 
 function Card({question,answer,setAnswer,curIdx,setCurIdx}){

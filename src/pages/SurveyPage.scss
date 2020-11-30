@@ -11,15 +11,14 @@
 }
 
 .slider{
-    border: 1px solid gray;
+    // border: 1px solid gray;
     width: 30rem;
     display: flex;
     align-items: center;
-    margin: 0;
+    margin: 0 auto;
     overflow: hidden;
 
     &__wrapper{
-        border: 1px solid red;
         width: 30rem;
     }
     &__desc{
@@ -29,4 +28,12 @@
     }
 }
 
-// swiper
+// .slider__wrapper{
+//     // border: 1px solid red;
+//     width: 30rem;
+// }
+// .slider__desc{
+//     font-size: 2rem;
+//         font-weight: bold;
+//         margin-bottom: 2rem;
+// }

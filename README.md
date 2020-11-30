@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# 👨‍✈️ KHUSAT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+**KHUSAT : 성격 유형 테스트로 알아보는 병과 추천 테스트**
 
-In the project directory, you can run:
+요즘 SNS에 MBTI를 시작으로 많은 유형의 성격 유형 테스트가 있습니다!
 
-### `yarn start`
+꽃으로 알아보는, 스낵으로 알아보는,  등등... 저희는 좀 특별하답니다  👏
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+20대 남자면 꼭 가야만 하는 군대, 어떤 보직이 알맞을지 미리 추천해 드리겠습니다.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+(이미지 추가하기)
 
-### `yarn test`
+## 🔖 프로그램 구조
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+`KHUSAT-FRONT`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `components` : 재사용이 가능한 component들을 모아놓았습니다.
+- `pages` : 기능별 화면을 모아놓은 라우팅 페이지들 입니다.
+- `store` : 상태관리를 위한 redux store 입니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`KHUSAT-SERVER`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🌏 개발환경 및 사용 언어
 
-### `yarn eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`KHUSAT-FRONT`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Visual Studio Code
+- React.js
+- Redux, Redux-thunk(redux middleware)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+🌟**dependency**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- sass
+- antd
+- axios
+- react-router-dom
 
-## Learn More
+`KHUSAT-SERVER`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔎 사용 방법
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+**(배포 이전) Local에서 동작하는 방법을 소개합니다.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. repository clone 하기
+    > 원하는 디렉토리에서 khusat-front 를 클론해옵니다.
 
-### Analyzing the Bundle Size
+    ```jsx
+    git clone http://khuhub.khu.ac.kr/khusat/khusat-front.git
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. package 파일 설치하기
+    > 빌드를 위한 패키지 모듈들을 설치합니다. (yarn을 추천합니다)
 
-### Making a Progressive Web App
+    ```jsx
+    yarn // yarn 만 입력합니다.
+    npm install // npm 사용시 npm install을 입력합니다.
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. application 실행하기
+    > `yarn start` 로 실행 후 [`localhost:3000`](http://localhost:3000) 으로 접속하여 테스트 할 수 있습니다!
 
-### Advanced Configuration
+    ```jsx
+    yarn start
+    https://localhost:3000
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 👥 구성원 소개
 
-### Deployment
+> KHUSAT의 개발자들 입니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+|🙋[이준호](https://github.com/juno7803)|🙋[박기홍](https://github.com/kyhong222)|
+|:------:|:-----:|
+|![이준호사진]()|![박기홍사진]()|
+|프론트 개발자|서버 개발자|
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## © License
