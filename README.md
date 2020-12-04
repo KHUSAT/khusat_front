@@ -28,6 +28,12 @@
 - React.js
 - Redux, Redux-thunk(redux middleware)
 
+`KHUSAT-SERVER`
+
+- Visual Studio Code
+- express
+- mongoose
+
 🌟**dependency**
 
 - sass
@@ -40,6 +46,7 @@
 ## 🔎 사용 방법
 
 **(배포 이전) Local에서 동작하는 방법을 소개합니다.**
+> 서버 및 클라이언트 배포 예정
 
 1. repository clone 하기
     > 원하는 디렉토리에서 khusat-front 를 클론해옵니다.
@@ -70,7 +77,13 @@
 
 |🙋[이준호](https://github.com/juno7803)|🙋[박기홍](https://github.com/kyhong222)|
 |:------:|:-----:|
-|![이준호사진]()|![박기홍사진]()|
+|![이준호사진](https://khusinsa.s3.amazonaws.com/ljh.JPG)|![박기홍사진](https://khusinsa.s3.amazonaws.com/pkh.jpeg)|
 |프론트 개발자|서버 개발자|
 
 ## © License
+MIT License Copyright(c) [JunHo Lee]
+MIT License Copyright(c) [Kyhong Park]
+
+## ☎️ Contact
+프로젝트에 문제가 있거나 궁금하신 사항은 메일로 연락주세요
+- Email: junolee7803@gmail.com
