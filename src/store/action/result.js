@@ -1,3 +1,5 @@
+import getResultApi from '../../api/getResult';
+
 // action
 const GET_RESULT = 'GET_RESULT';
 const GET_RESULT_SUCCESS = 'GET_RESULT_SUCCESS';
@@ -12,6 +14,18 @@ const initialState = {
     loading: true,
     data: null,
     error: null
+}
+
+export function getResultThunk(answer){
+    return async (dispatch) => {
+        dispatch(getResult());
+        try{
+            const { data } = await getResultApi(answer);
+            dispatch(getResultSuccess(data));
+        }catch(err){
+            dispatch(getResultError());
+        }
+    }
 }
 
 function result(

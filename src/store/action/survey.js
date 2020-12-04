@@ -1,3 +1,5 @@
+import getQuestionApi from '../../api/getQuestion';
+
 // action
 const GET_SURVEY = 'GET_SURVEY';
 const GET_SURVEY_SUCCESS = 'GET_SURVEY_SUCCESS';
@@ -12,6 +14,18 @@ const initialState = {
     loading: true,
     data: null,
     error: null
+}
+
+export function getQuestionThunk(){
+    return async (dispatch) => {
+        dispatch(getSurvey());
+        try{
+            const { data } = await getQuestionApi();
+            dispatch(getSurveySuccess(data));
+        }catch(err){
+            dispatch(getSurveyError());
+        }
+    }
 }
 
 function survey(
