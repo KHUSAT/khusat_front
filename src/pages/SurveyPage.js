@@ -40,7 +40,6 @@ function SurveyPage({ history, question }) {
     if(answer.length === 10){ // answer state 배열에 10개가 채워지면,
       dispatch(getResultThunk(answer));
       history.push('/result');
-      console.log(history);
     }
   },[answer]);
 
