@@ -81,9 +81,10 @@
 |프론트 개발자|서버 개발자|
 
 ## © License
-MIT License Copyright(c) [JunHo Lee]
+MIT License Copyright(c) [JunHo Lee]   
 MIT License Copyright(c) [Kyhong Park]
 
 ## ☎️ Contact
 프로젝트에 문제가 있거나 궁금하신 사항은 메일로 연락주세요
-- Email: junolee7803@gmail.com
+- Email: junolee7803@gmail.com [JunHo Lee]
+- Email: kyhong222@naver.com [Kyhong Park]
