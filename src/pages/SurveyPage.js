@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "../components/card/Card";
+import {useDispatch} from 'react-redux';
+import {getResultThunk} from "../store/action/result";
 import ProgressBar from "../components/progressbar/ProgressBar";
 import "antd/dist/antd.css";
 
@@ -35,8 +37,10 @@ function SurveyPage({ history, question }) {
   const dispatch = useDispatch();
 
   useEffect(()=>{
-    if(answer.length === 10){
-      dispatch()
+    if(answer.length === 10){ // answer state 배열에 10개가 채워지면,
+      dispatch(getResultThunk(answer));
+      history.push('/result');
+      console.log(history);
     }
   },[answer]);
 

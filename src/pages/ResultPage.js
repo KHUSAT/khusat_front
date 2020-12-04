@@ -1,5 +1,4 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -24,18 +23,15 @@ const Description = styled.div`
     font-size: 1.4rem;
 `;
 
-function ResultPage(){
-    const data = useSelector(state=>state.result.data);
-
+function ResultPage({result}){
     return(
         <>
-            {data ? (
+            {result && (
                 <Container>
-                    <Title>{data.high}</Title>
-                    <Position>{data.low}</Position>
-                    <Description>{data.description}</Description>
+                    <Title>{result.high}</Title>
+                    <Position>{result.low}</Position>
+                    <Description>{result.description}</Description>
                 </Container>)
-                : <div>로딩중</div>
             }  
         </>
     );

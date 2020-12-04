@@ -1,10 +1,35 @@
 import React,{useEffect} from 'react';
-import './MainPage.scss';
-import {Button} from "antd";
-import axios from 'axios';
-import mainImg from "../assets/main-soldier.png";
-import {getSurvey, getSurveySuccess, getSurveyError} from '../store/action/survey';
+import {getQuestionThunk} from '../store/action/survey';
 import { useDispatch } from 'react-redux';
+import {Button} from "antd";
+import mainImg from "../assets/main-soldier.png";
+import styled from 'styled-components';
+
+const Container = styled.div`
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const MainImg = styled.img`
+    margin-top: 2rem;
+    width: 70rem;
+    height: 35rem;
+    border-radius: 1rem;
+`;
+
+const MainTitle = styled.div`
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+`;
+
+const MainDesc = styled.div`
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+`;
 
 
 function MainPage({history}){
@@ -12,35 +37,27 @@ function MainPage({history}){
     const onClick = () => {
         history.push('/survey');
     }
+
     useEffect(()=>{
-        const getApi = async() =>{
-            dispatch(getSurvey());
-            try{
-              const {data} = await axios.get("getquestions");
-              dispatch(getSurveySuccess(data));
-            }catch(e){
-              dispatch(getSurveyError(e));
-            }
-          }
-        getApi();    
+        dispatch(getQuestionThunk());
     },[]);
 
     return(
         <>
-            <div className="main-wrapper">
-                <div className="main-title">KHUSAT</div>
-                <div className="main-title__desc">
+            <Container>
+                <MainTitle>KHUSAT</MainTitle>
+                <MainDesc>
                     KHUSAT 특별과정, <br></br>
                     여러분의 보직을 추천드립니다.
-                </div>
+                </MainDesc>
                 <Button 
                     size="large"
                     onClick={onClick}
                     color="#536349"
                     style={{}}
                 > 시작하기</Button>
-                <img className="main-image" src={mainImg}/>
-            </div>
+                <MainImg src={mainImg}/>
+            </Container>
         </>
     );
 }

@@ -1,7 +1,7 @@
 import "./App.scss";
 import MainPage from "./pages/MainPage";
 import SurveyPageContainer from "./containers/SurveyPageContainer";
-import ResultPage from "./pages/ResultPage";
+import ResultPageContainer from "./containers/ResultPageContainer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route path="/survey" component={SurveyPageContainer} />
-          <Route path="/result" component={ResultPage} />
+          <Route path="/result" component={ResultPageContainer} />
         </Switch>
       </div>
     </BrowserRouter>
