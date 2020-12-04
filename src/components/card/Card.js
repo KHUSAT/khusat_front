@@ -10,10 +10,6 @@ function Card({ question, answer, setAnswer, curIdx, setCurIdx }) {
     height: 100%;
     font-size: 20px;
     font-weight: bold;
-    /* ${(props) => css`
-        transform: translateX(${-500 * props.curIdx}px);
-        transition: 0.5s;
-    `} */
   `;
 
   const CardQuest = styled.div`

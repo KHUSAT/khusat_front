@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../components/card/Card";
 import ProgressBar from "../components/progressbar/ProgressBar";
 import "antd/dist/antd.css";
@@ -18,20 +18,27 @@ const Container = styled.div`
 `;
 
 const SliderCotainer = styled.div`
-  border: 1px solid gray;
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   ${(props) => css`
         transform: translateX(${-500 * props.curIdx}px);
         transition: 0.5s;
   `}
+  margin-top: 20rem;
 `;
 
 function SurveyPage({ history, question }) {
   const [curIdx, setCurIdx] = useState(0);
   const [answer, setAnswer] = useState([]); // post로 보낼 state
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    if(answer.length === 10){
+      dispatch()
+    }
+  },[answer]);
 
   return (
     <SurveyContainer>
