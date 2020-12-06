@@ -3,14 +3,13 @@ import Card from "../components/card/Card";
 import {useDispatch} from 'react-redux';
 import {getResultThunk} from "../store/action/result";
 import "antd/dist/antd.css";
-import mainPattern from "../assets/mainPattern.jpeg";
 
 import styled, { css } from "styled-components";
 
 const SurveyContainer = styled.div`
   display: flex;
   justify-content: center;
-  background-image: url(${mainPattern});
+  // 얘도 배경 고려해보기
 `;
 
 const Container = styled.div`
