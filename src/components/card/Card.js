@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { lighten,darken } from "polished";
 
 function Card({ question, answer, setAnswer, curIdx, setCurIdx }) {
   const CardWrap = styled.div`
@@ -30,6 +31,12 @@ function Card({ question, answer, setAnswer, curIdx, setCurIdx }) {
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover {
+      background: ${lighten(0.1, "#536349")}; // color of card -> theme화 하기
+    }
+    &:active {
+      background: ${darken(0.1, "#536349")};
+    }
   `;
 
   const onClickOne = () => {
