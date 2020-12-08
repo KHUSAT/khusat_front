@@ -23,6 +23,9 @@ const Description = styled.div`
     font-size: 1.4rem;
 `;
 
+// TODO: 다시하기 and 카카오톡 공유
+// 다시하기 : getQuestion dispatch 해준 다음 push('/survey');
+
 function ResultPage({result}){
     return(
         <>
