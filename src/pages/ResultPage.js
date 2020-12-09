@@ -34,6 +34,7 @@ function ResultPage({result}){
                     <Title>{result.high}</Title>
                     <Position>{result.low}</Position>
                     <Description>{result.description}</Description>
+                    <img src={result.image} />
                 </Container>)
             }  
         </>
