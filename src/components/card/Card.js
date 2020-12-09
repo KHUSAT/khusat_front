@@ -1,6 +1,20 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { lighten,darken } from "polished";
+const sizes = {
+  desktop: 102.4,
+  tablet: 76.8,
+  phone: 36,
+};
+
+const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (max-width: ${sizes[label]}rem) {
+      ${css(...args)}
+    }
+  `;
+  return acc;
+}, {});
 
 function Card({ question, answer, setAnswer, curIdx, setCurIdx }) {
   const CardWrap = styled.div`
@@ -11,6 +25,9 @@ function Card({ question, answer, setAnswer, curIdx, setCurIdx }) {
     height: 100%;
     font-size: 20px;
     font-weight: bold;
+    ${media.phone`
+      min-width: 360px;
+    `}
   `;
 
   const CardQuest = styled.div`
@@ -32,7 +49,7 @@ function Card({ question, answer, setAnswer, curIdx, setCurIdx }) {
     justify-content: center;
     align-items: center;
     &:hover {
-      background: ${lighten(0.1, "#536349")}; // color of card -> theme화 하기
+      background: ${lighten(0.1, "#536349")};
     }
     &:active {
       background: ${darken(0.1, "#536349")};
@@ -72,6 +89,5 @@ function Card({ question, answer, setAnswer, curIdx, setCurIdx }) {
     </>
   );
 }
-// 나중에 데이터 넘어오면 넘어온 데이터로 카드 업데이트
 
 export default Card;
