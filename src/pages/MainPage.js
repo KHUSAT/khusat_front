@@ -24,13 +24,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: url(${pattern});
-  background-repeat: none; // background-image가 컨테이너를 가득 채우지 못할 경우에도 반복하지 않는다.
-  background-size: cover; // 사이즈가 container에 맞지 않아도 꽉 차도록 채운다.
-  background-position: center; // background-image가 컨테이너에 가운데로 오도록 한다.
+  background-repeat: none; 
+  background-size: cover; 
+  background-position: center; 
   color: #ffffff;
 `;
 
@@ -50,11 +49,9 @@ const MainTitle = styled.div`
   margin-top: 3rem;
   font-size: 5rem;
   font-weight: bold;
-  ${media.tablet`
-    font-size: 4rem;
-  `}
   ${media.phone`
     font-size: 3rem;
+    margin-top: 2rem;
   `}
 `;
 
@@ -63,6 +60,7 @@ const MainDesc = styled.div`
   margin-bottom: 2rem;
   font-size: 1.5rem;
   ${media.tablet`
+    margin-top: 0.5rem;
     font-size: 1.1rem;
   `}
 `;
@@ -89,7 +87,7 @@ const MainBtn = styled.div`
     color: #010101;
   }
   ${media.phone`
-    width: 20rem;
+    width: 16rem;
     height: 4rem;
     font-size: 1.2rem;
   `}
@@ -106,7 +104,6 @@ function MainPage({ history }) {
   }, []);
 
   return (
-    <>
       <Container>
         <MainTitle>KHUSAT</MainTitle>
         <MainDesc>
@@ -116,7 +113,6 @@ function MainPage({ history }) {
         <MainImg src={soldier} />
         <MainBtn onClick={onClick}>시작하기</MainBtn>
       </Container>
-    </>
   );
 }
 
