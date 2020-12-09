@@ -51,7 +51,7 @@ const MainTitle = styled.div`
   font-weight: bold;
   ${media.phone`
     font-size: 3rem;
-    margin-top: 2rem;
+    margin-top: 1.6rem;
   `}
 `;
 
@@ -90,6 +90,7 @@ const MainBtn = styled.div`
     width: 16rem;
     height: 4rem;
     font-size: 1.2rem;
+    margin-top: 0;
   `}
 `;
 

@@ -1,0 +1,27 @@
+#kakao-link-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #FEE500;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 14.5rem;
+    height: 5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    img{
+        width: 2rem;
+        height: auto;
+    }
+    @media screen and (max-width: 36rem) {
+    width: 10rem;
+    height: 4rem;
+    font-size: 0.9rem;
+        img{
+            width: 1rem;
+            height: auto;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { lighten,darken } from "polished";
+import KakaoBtn from "../containers/KakaoBtnContainer";
 
 const sizes = {
   desktop: 102.4,
@@ -71,12 +72,35 @@ const Description = styled.div`
   `}
 `;
 
+const DescList = styled.li`
+  &::marker{
+    color: #536349;
+  }
+  list-style-position: inside;
+  text-indent: -1.6rem;
+  padding-left: 1.2rem;
+  ${media.phone`
+  text-indent: -0.9rem;
+  padding-left: 0.8rem;
+  `}
+`;
+
 const ContentBox = styled.div`
-margin-top: 1rem;
+  margin-top: 1rem;
   background-color: #f2f2f2;
   text-align: left;
   border-radius: 1rem;
   padding: 2rem;
+  width: 30rem;
+  ${media.phone`
+    width: 20rem;
+  `}
+`;
+
+const BtnWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 30rem;
   ${media.phone`
     width: 20rem;
@@ -90,7 +114,7 @@ const ResetBtn = styled.div`
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  width: 25rem;
+  width: 14.5rem;
   height: 5rem;
   font-size: 1.6rem;
   font-weight: bold;
@@ -103,14 +127,11 @@ const ResetBtn = styled.div`
     background: ${darken(0.1, "#f2f2f2")};
   }
   ${media.phone`
-    width: 16rem;
+    width: 9rem;
     height: 4rem;
     font-size: 1.2rem;
   `}
 `;
-
-// TODO: 다시하기 and 카카오톡 공유
-// 다시하기 : getQuestion dispatch 해준 다음 push('/survey');
 
 function ResultPage({ history, result }) {
   const onClick=()=>{
@@ -124,11 +145,17 @@ function ResultPage({ history, result }) {
           <Position>{result.low}</Position>
           <ResultImg src={result.image} />
           <ContentBox>
-            <Description>{result.description}</Description>
+            <Description>
+              {result.description.map((desc,index)=>
+                (<DescList key={index}>{desc}</DescList>))}
+            </Description>
           </ContentBox>
         </Container>
       )}
-      <ResetBtn onClick={onClick}>다시하기</ResetBtn>
+      <BtnWrapper>
+        <ResetBtn onClick={onClick}>다시하기</ResetBtn>
+        <KakaoBtn result={result} />
+      </BtnWrapper>
     </Wrapper>
   );
 }
