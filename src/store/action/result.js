@@ -1,4 +1,4 @@
-import getResultApi from '../../api/getResult';
+import getResultApi from '../../lib/api/getResult';
 
 // action
 const GET_RESULT = 'GET_RESULT';

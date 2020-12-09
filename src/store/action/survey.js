@@ -1,4 +1,4 @@
-import getQuestionApi from '../../api/getQuestion';
+import getQuestionApi from '../../lib/api/getQuestion';
 
 // action
 const GET_SURVEY = 'GET_SURVEY';

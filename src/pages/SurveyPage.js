@@ -6,20 +6,36 @@ import "antd/dist/antd.css";
 
 import styled, { css } from "styled-components";
 
+const sizes = {
+  desktop: 102.4,
+  tablet: 76.8,
+  phone: 36,
+};
+
+const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (max-width: ${sizes[label]}rem) {
+      ${css(...args)}
+    }
+  `;
+  return acc;
+}, {});
+
 const SurveyContainer = styled.div`
   display: flex;
   justify-content: center;
-  // 얘도 배경 고려해보기
 `;
 
 const Container = styled.div`
-  /* border: solid 1px red; */
   width: 500px;
   height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
+  ${media.phone`
+    width: 360px;
+  `}
 `;
 
 const ProgressBar = styled.div`
@@ -31,6 +47,9 @@ const ProgressBar = styled.div`
   background-color: #747b4b;
   border-radius: 1rem;
   position: relative;
+  ${media.phone`
+    margin-top: 10rem;
+  `}
 `;
 
 // 적당한 icon 찾으면 바꿀 것임
@@ -50,11 +69,17 @@ const SliderCotainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 6rem;
   ${(props) => css`
         transform: translateX(${-500 * props.curIdx}px);
         transition: 0.5s;
   `}
-  margin-top: 6rem;
+  ${media.phone`
+  ${(props)=> css`
+    transform: translateX(${-360 * props.curIdx}px);
+    transition: 0.5s;
+  `}
+  `}
 `;
 
 function SurveyPage({ history, question }) {
@@ -72,12 +97,10 @@ function SurveyPage({ history, question }) {
   return (
     <SurveyContainer>
       <Container>
-        {/* 상태바 넣기 */}
         <ProgressBar>
           <ProgressIcon curIdx={curIdx}/>
         </ProgressBar>
         <SliderCotainer curIdx={curIdx}>
-          {/* 얘가 슬라이더 컨테이너 */}
           {question.map((question) => (
             <Card
               key={question.num}

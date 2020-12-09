@@ -1,4 +1,3 @@
-import "./App.scss";
 import MainPage from "./pages/MainPage";
 import SurveyPageContainer from "./containers/SurveyPageContainer";
 import ResultPageContainer from "./containers/ResultPageContainer";
