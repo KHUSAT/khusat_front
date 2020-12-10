@@ -1,4 +1,5 @@
 #kakao-link-btn{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,6 +12,11 @@
     height: 5rem;
     font-size: 1.2rem;
     font-weight: bold;
+    transform: background-color;
+    transition: ease-out 0.3s;
+    &:hover{
+        filter: brightness(105%);
+    }
     img{
         width: 2rem;
         height: auto;
