@@ -33,15 +33,19 @@ const KakaoBtn = ({result}) => {
           },
         },
         social: {
-          likeCount: 77,
-          commentCount: 55,
-          sharedCount: 333,
+          likeCount: 7,
+          sharedCount: 7,
         },
         buttons: [
           {
             title: "나도 테스트 하기",
             link: {
               webUrl: "http://khusat.herokuapp.com",
+            },
+          },{
+            title: "나도 테스트 하기",
+            link: {
+              moblieWebUrl: "http://khusat.herokuapp.com",
             },
           },
         ],
