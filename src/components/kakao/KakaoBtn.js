@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
 import "./kakaoBtn.scss";
-import dotenv from "dotenv";
 import kakao from "../../assets/kakao.png";
-dotenv.config();
 
 const KakaoBtn = ({result}) => {
-  useEffect(() => {
+  useEffect(()=>{
     createKakaoButton();
-  }, []);
-
+  },[]);
   const createKakaoButton = () => {
     // kakao sdk script이 정상적으로 불러와졌으면 window.Kakao로 접근이 가능합니다
     if (window.Kakao) {

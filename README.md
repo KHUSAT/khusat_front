@@ -8,7 +8,7 @@
 
 20대 남자면 꼭 가야만 하는 군대, 어떤 보직이 알맞을지 미리 추천해 드리겠습니다.
 
-> (이미지 추가 예정)
+![쿠사트](https://khusinsa.s3.amazonaws.com/khusatmain.gif)
 
 ## 🔖 프로그램 구조
 
@@ -17,8 +17,6 @@
 - `components` : 재사용이 가능한 component들을 모아놓았습니다.
 - `pages` : 기능별 화면을 모아놓은 라우팅 페이지들 입니다.
 - `store` : 상태관리를 위한 redux store 입니다.
-
-`KHUSAT-SERVER`
 
 ## 🌏 개발환경 및 사용 언어
 
@@ -41,35 +39,11 @@
 - axios
 - react-router-dom
 
-`KHUSAT-SERVER`
-
 ## 🔎 사용 방법
 
-**(배포 이전) Local에서 동작하는 방법을 소개합니다.**
-> 서버 및 클라이언트 배포 예정
+- 별도의 설치 없이 http://khusat.herokuapp.com 에서 자유롭게 사용하실 수 있습니다!
 
-1. repository clone 하기
-    > 원하는 디렉토리에서 khusat-front 를 클론해옵니다.
-
-    ```jsx
-    git clone http://khuhub.khu.ac.kr/khusat/khusat-front.git
-    ```
-
-2. package 파일 설치하기
-    > 빌드를 위한 패키지 모듈들을 설치합니다. (yarn을 추천합니다)
-
-    ```jsx
-    yarn // yarn 만 입력합니다.
-    npm install // npm 사용시 npm install을 입력합니다.
-    ```
-
-3. application 실행하기
-    > `yarn start` 로 실행 후 [`localhost:3000`](http://localhost:3000) 으로 접속하여 테스트 할 수 있습니다!
-
-    ```jsx
-    yarn start
-    https://localhost:3000
-    ```
+> [!지금 테스트 체험해보기](http://khusat.herokuapp.com)
 
 ## 👥 구성원 소개
 
@@ -86,5 +60,5 @@ MIT License Copyright(c) [Kyhong Park]
 
 ## ☎️ Contact
 프로젝트에 문제가 있거나 궁금하신 사항은 메일로 연락주세요
-- Email: junolee7803@gmail.com [JunHo Lee]
-- Email: kyhong222@naver.com [Kyhong Park]
+- Email: junolee7803@gmail.com 
+- Email: kyhong222@naver.com
