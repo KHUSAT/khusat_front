@@ -1,7 +1,7 @@
 import React,{useEffect} from "react";
 import styled, { css } from "styled-components";
 import { lighten,darken } from "polished";
-import KakaoBtn from "../containers/KakaoBtnContainer";
+import KakaoBtn from "../components/kakao/KakaoBtn";
 
 const sizes = {
   desktop: 102.4,
