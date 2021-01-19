@@ -8,7 +8,6 @@
 
 20대 남자면 꼭 가야만 하는 군대, 어떤 보직이 알맞을지 미리 추천해 드리겠습니다.
 
-![쿠사트](https://khusinsa.s3.amazonaws.com/khusatmain.gif)
 
 ## 🔖 프로그램 구조
 
