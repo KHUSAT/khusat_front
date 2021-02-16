@@ -48,14 +48,15 @@
 
 > KHUSAT의 개발자들 입니다.
 
-|🙋[이준호](https://github.com/juno7803)|🙋[박기홍](https://github.com/kyhong222)|
-|:------:|:-----:|
-|![이준호사진](https://khusinsa.s3.amazonaws.com/ljh.JPG)|![박기홍사진](https://khusinsa.s3.amazonaws.com/pkh.jpeg)|
-|프론트 개발자|서버 개발자|
+|🙋[이준호](https://github.com/juno7803)|🙋[박기홍](https://github.com/kyhong222)|🙋[배경호](https://github.com/backdrop9019)|
+|:------:|:-----:|:-----:|
+|![준호사진](https://khusinsa.s3.amazonaws.com/ljh.JPG)|![기홍사진](https://khusinsa.s3.amazonaws.com/pkh.jpeg)|![경호사진]()|
+|프론트엔드 개발자|백엔드 개발자|백엔드 개발자|
 
 ## © License
 MIT License Copyright(c) [JunHo Lee]   
-MIT License Copyright(c) [Kyhong Park]
+MIT License Copyright(c) [Kyhong Park]   
+MIT License Copyright(c) [Kyung Ho Bae]
 
 ## ☎️ Contact
 프로젝트에 문제가 있거나 궁금하신 사항은 메일로 연락주세요
